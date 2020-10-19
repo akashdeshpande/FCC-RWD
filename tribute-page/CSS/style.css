@@ -1,4 +1,221 @@
+/* imports */
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,600;1,300&display=swap');
+  
+/* css rules */
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-	margin: 0;
-	padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+}
+
+h1, h2, h3 {
+  font-family: "Abril Fatface", serif;
+  margin: 0;
+  color: white;
+  letter-spacing: 0.5px;
+}
+
+p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  margin: 10px 0px;
+}
+
+.website-header {
+  height: 64px;
+  margin: 0;
+  color: white;
+}
+
+.header-text {
+  text-align: center;
+  font-size: 48px;
+}
+
+.hero {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: url("https://raw.githubusercontent.com/akashdeshpande/FCC-RWD/main/tribute-page/images/chester-hero.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 20%;
+  background-size: cover;
+}
+
+.quote {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  grid-column: 5/6;
+}
+
+.quote q {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.quote cite {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+}
+
+.quoteContainer {
+  display: grid;
+  height: inherit;
+  align-items: center;
+}
+
+.btn {
+  color: white;
+  text-decoration: none;
+  border: 4px solid white;
+  padding: 10px 24px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  text-align: center;
+}
+
+#aboutChesterButton {
+  margin-top: 20px;
+  width: max-content;
+}
+
+.newSection {
+  display: flex;
+  flex-direction: column;
+  padding: 64px 48px;
+  color: white;
+}
+
+#aboutSection {
+  background-color: #001B47;
+  color: white;
+}
+
+.heading {
+  margin-bottom: 20px;
+  font-size: 36px;
+}
+
+#img-div {
+  align-self: center;
+}
+
+#image {
+  display: block;
+  max-width: 100%;
+}
+
+#img-caption {
+  margin-top: 20px;
+  text-align: center;
+}
+
+#tribute-info {
+  margin: 30px 0px;
+}
+
+#tribute-link {
+  align-self: center;
+  margin-top: 20px;
+}
+
+.notableSongsSection{
+  background-color: #002665;
+  color: white;
+}
+
+.notableSongsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-gap: 60px 60px;
+  margin: 30px 0px; 
+}
+
+.songContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.albumImageContainer {
+  width: 200px;
+  height: 200px;
+  margin: 40px 40px 20px 40px;
+}
+
+.albumImage {
+  width: inherit;
+  height: inherit;
+}
+
+.songName {
+  margin-bottom: 25px;
+}
+
+#seeDiscographyButton {
+  align-self: center;
+  margin-top: 20px;
+}
+
+#suicidePreventionSection {
+  background-color: #001B47;
+  align-items: center;
+}
+
+#suicidePreventionButton{
+  margin-top: 30px;
+}
+
+/* responsive */
+
+@media (max-width: 1024px) {
+  body {
+    font-size: 16px;
+  }
+  .header-text {
+    font-size: 36px;
+  }
+  .heading {
+    font-size: 32px;
+  }
+  .btn {
+    font-size: 18px;
+  }
+  .albumImageContainer {
+    width: 160px;
+    height: 160px;
+  }
+  .newSection {
+    padding: 48px 32px;
+  }
+  .quote q{
+    font-size: 20px;
+  }
+  .quote cite{
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .quote {
+    grid-column: auto;
+    grid-row: 5/6;
+    align-items: center;
+  }
+  .hero {
+    background-position: 25% 25%;
+  }
 }
