@@ -1,44 +1,74 @@
-.chip {
-    display: inline-block;
-    padding-left: 12px;
-    padding-right: 12px;
-    padding-top: 6px;
-    padding-bottom: 8px;
-    background-color: #E4E4E4;
-    color: black;
-    border-radius: 20px;
+/* colors 
+bg #007ACC;
+
+*/
+
+/* import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lora&family=Nunito+Sans&display=swap');
+
+body {
+    margin: 0px;
+    height: 100vh;
+    background-color: #333333;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Nunito Sans', sans-serif;
+}
+h1 {
+    margin: 0px;
+    font-family: 'Lora', serif;
+    letter-spacing: 2px;;
+}
+
+.header {
     text-align: center;
-    margin-bottom: 5px;
-    margin-right: 5px;
-}
-
-.chip:hover {
-    background-color: lightgray;
-    color: black;
-    cursor: pointer;
-}
-
-.chipSelected {
-    display: inline-block;
-    padding-left: 12px;
-    padding-right: 12px;
-    padding-top: 6px;
-    padding-bottom: 8px;
-    background-color:#333333;
     color: white;
-    border-radius: 20px;
-    text-align: center;
-    margin-bottom: 5px;
-    margin-right: 5px;
+    margin-top: 40px;
+    text-shadow: 2px 2px 4px #222222;
 }
 
-.chipSelected:hover {
-    background-color: black;
+#description {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 20px;
+    margin-top: 10px;
+    text-shadow: 2px 2px 4px #000;
+}
+
+.form-container {
+    background-color: #222222;
     color: white;
-    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    margin: 0 auto;
+    font-family: 'Nunito Sans', sans-serif;
 }
 
-.hidden {
-    display: none;
-    visibility: hidden;
+#survey-form {
+    padding: 20px 30px;
+}
+
+.inputGroup {
+    margin: 10px;
+}
+
+.inputWidth {
+    box-sizing: border-box;
+    width: 100%;
+    height: 36px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    padding: 1px 12px;
+    border: none;
+}
+
+.inputWidth:focus {
+    outline: 3px solid darkgray;
+}
+
+#feedback {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100px;
 }

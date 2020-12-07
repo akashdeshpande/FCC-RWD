@@ -1,4 +1,4 @@
-<!DOCTYPE hrml>
+<!DOCTYPE html>
 <html>
     <head>
         <title>F.R.I.E.N.D.S Trivia</title>
@@ -7,54 +7,78 @@
     <body>
         <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
         <main>
-            <h1 id="title">F.R.I.E.N.D.S Trivia</h1>
-            <p id="description">Check and see how well do you know our favourite T.V show, F.R.I.E.N.D.S! </p> 
-            <br>
-            <form id="survey-form">
-                <label id="name-label" for="name">Name*</label>
-                <input type="text" name="name" id="name" placeholder="Enter your name" required><br>
+            <header class="header">
+                <h1 id="title">F.R.I.E.N.D.S Trivia</h1>
+                <p id="description">Check and see how well do you know our favourite T.V show, F.R.I.E.N.D.S! </p> 
+                <br>
+            </header>
+            <div class="form-container">
+                <form id="survey-form">
+                    <!-- Name -->
+                    <div class="inputGroup">
+                        <label id="name-label" for="name">Name*</label><br>
+                        <input type="text" class="inputWidth" name="name" id="name" placeholder="Enter your name" required><br>
+                    </div>
 
-                <label id="email-label" for="email">Email*</label>
-                <input type="email" name="email" id="email" placeholder="Enter your email" required><br>
+                    <!-- Email -->
+                    <div class="inputGroup">
+                        <label id="email-label" for="email">Email*</label><br>
+                        <input type="email" class="inputWidth" name="email" id="email" placeholder="Enter your email" required><br>
+                    </div>
 
-                <label id="number-label" for="number">Age*</label>
-                <input type="number" name="age" id="number" min="18" max="99" placeholder="Enter your age" required><br>
+                    <!-- Age -->
+                    <div class="inputGroup">
+                        <label id="number-label" for="number">Age*</label><br>
+                        <input type="number" class="inputWidth" name="age" id="number" min="18" max="99" placeholder="Enter your age" required><br>
+                    </div>
 
-                <label id="dropdown-label" for="dropdown">Dropdown</label>
-                <select id="dropdown" name="dropdown-list"><br>
-                    <option value="Opition1">Opition 1</option>
-                    <option value="Opition2">Opition 2</option>
-                    <option value="Opition3">Opition 3</option>
-                </select>
-                
-                <fieldset>
-                    <legend>What's your legend?</legend>
-                    <input type="radio" id="radioone" name="radios" value="one">
-                    <label for="radioone">Radio One</label><br>
+                    <!-- Dropdown -->
+                    <div class="inputGroup">
+                        <label id="dropdown-label" for="dropdown">Dropdown</label><br>
+                        <select id="dropdown" class="inputWidth" name="dropdown-list"><br>
+                            <option value="Opition1">Opition 1</option>
+                            <option value="Opition2">Opition 2</option>
+                            <option value="Opition3">Opition 3</option>
+                        </select>
+                    </div>
 
-                    <input type="radio" id="radiotwo" name="radios" value="two">
-                    <label for="radiotwo">Radio Two</label>
+                    <!-- Radio -->
+                    <div class="inputGroup">
+                        <fieldset>
+                            <legend>The radio legend</legend>
+                            <input type="radio" id="radioone" name="radios" value="one">
+                            <label for="radioone">Radio One</label><br>
 
-                </fieldset>
+                            <input type="radio" id="radiotwo" name="radios" value="two">
+                            <label for="radiotwo">Radio Two</label><br>
+                        </fieldset>
+                    </div>
 
-                <fieldset>
-                    <legend> The checkbox legend</legend>
-                    <input type="checkbox" id="checkone" name="checks" value="checkone">
-                    <label for="checkone">Checkbox One</label><br>
+                    <!-- Checkbox -->
+                    <div class="inputGroup">
+                        <fieldset>
+                            <legend> The checkbox legend</legend>
+                            <input type="checkbox" id="checkone" name="checks" value="checkone">
+                            <label for="checkone">Checkbox One</label><br>
 
-                    <input type="checkbox" id="checktwo" name="checks" value="checktwo">
-                    <label for="checktwo">Checkbox Two</label><br>
+                            <input type="checkbox" id="checktwo" name="checks" value="checktwo">
+                            <label for="checktwo">Checkbox Two</label><br>
 
-                    <input type="checkbox" id="checkthree" name="checks" value="checkthree">
-                    <label for="checkthree">Checkbox Three</label><br>
-                </fieldset>
+                            <input type="checkbox" id="checkthree" name="checks" value="checkthree">
+                            <label for="checkthree">Checkbox Three</label><br>
+                        </fieldset>
+                    </div>
 
-                <label for="feedback">Your Feedback on this</label> <br>
-                <textarea rows="5" cols="90" id="feedback"></textarea> 
+                    <!-- Text area -->
+                    <div class="inputGroup">
+                        <label for="feedback">Your Feedback on this</label><br>
+                        <textarea id="feedback"></textarea> 
+                    </div>
 
-                <p>Fields marked with * are compulsory</p>
-                <button type="submit" id="submit">Submit</button>
-            </form>
+                    <p>Fields marked with * are compulsory</p>
+                    <button type="submit" id="submit">Submit</button>
+                </form>
+            </div>
         </main>
     </body>
 
