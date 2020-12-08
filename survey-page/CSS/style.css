@@ -1,10 +1,5 @@
-/* colors 
-bg #007ACC;
-
-*/
-
 /* import fonts */
-@import url('https://fonts.googleapis.com/css2?family=Lora&family=Nunito+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora&family=Nunito+Sans:wght@400;800&display=swap');
 
 body {
     margin: 0px;
@@ -71,4 +66,16 @@ h1 {
     box-sizing: border-box;
     width: 100%;
     height: 100px;
+}
+
+.submitContainer {
+    text-align: center;
+}
+
+.button {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 18px;
+    border: none;
+    padding: 8px 24px;
+    font-weight: 800;
 }

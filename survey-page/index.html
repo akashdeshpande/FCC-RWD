@@ -36,9 +36,9 @@
                     <div class="inputGroup">
                         <label id="dropdown-label" for="dropdown">Dropdown</label><br>
                         <select id="dropdown" class="inputWidth" name="dropdown-list"><br>
-                            <option value="Opition1">Opition 1</option>
-                            <option value="Opition2">Opition 2</option>
-                            <option value="Opition3">Opition 3</option>
+                            <option value="Option1">Option 1</option>
+                            <option value="Option2">Option 2</option>
+                            <option value="Option3">Option 3</option>
                         </select>
                     </div>
 
@@ -72,13 +72,25 @@
                     <!-- Text area -->
                     <div class="inputGroup">
                         <label for="feedback">Your Feedback on this</label><br>
-                        <textarea id="feedback"></textarea> 
+                        <textarea class="inputWidth" id="feedback"></textarea> 
+                    </div>
+                    
+                    <!-- Terms and conditions -->
+                    <div class="inputGroup">
+                        <input type="checkbox" id="terms" name="terms" value="terms" required>
+                        <label for="terms">I agree to the terms and conditions</label>
                     </div>
 
-                    <p>Fields marked with * are compulsory</p>
-                    <button type="submit" id="submit">Submit</button>
+                    
+                    <p class="inputWidth">Fields marked with * are compulsory</p><br>
+
+                    <!-- Submit -->
+                    <div class="inputWidth submitContainer">
+                        <button type="submit" class="button" id="submit">Submit</button>
+                    </div><br>
                 </form>
             </div>
+            <br><br><br>
         </main>
     </body>
 
