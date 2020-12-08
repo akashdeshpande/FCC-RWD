@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>F.R.I.E.N.D.S Trivia</title>
+        <title>F.R.I.E.N.D.S Trivia Survey</title>
         <link rel="stylesheet" href="CSS/style.css">
     </head>
     <body>
         <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
         <main>
             <header class="header">
-                <h1 id="title">F.R.I.E.N.D.S Trivia</h1>
+                <h1 id="title">F.R.I.E.N.D.S Trivia Survey</h1>
                 <p id="description">Check and see how well do you know our favourite T.V show, F.R.I.E.N.D.S! </p> 
                 <br>
             </header>
@@ -16,61 +16,61 @@
                 <form id="survey-form">
                     <!-- Name -->
                     <div class="inputGroup">
-                        <label id="name-label" for="name">Name*</label><br>
+                        <label id="name-label" for="name">Name *</label><br>
                         <input type="text" class="inputWidth" name="name" id="name" placeholder="Enter your name" required><br>
                     </div>
 
                     <!-- Email -->
                     <div class="inputGroup">
-                        <label id="email-label" for="email">Email*</label><br>
+                        <label id="email-label" for="email">Email *</label><br>
                         <input type="email" class="inputWidth" name="email" id="email" placeholder="Enter your email" required><br>
                     </div>
 
                     <!-- Age -->
                     <div class="inputGroup">
-                        <label id="number-label" for="number">Age*</label><br>
+                        <label id="number-label" for="number">Age *</label><br>
                         <input type="number" class="inputWidth" name="age" id="number" min="18" max="99" placeholder="Enter your age" required><br>
                     </div>
 
                     <!-- Dropdown -->
                     <div class="inputGroup">
-                        <label id="dropdown-label" for="dropdown">Dropdown</label><br>
+                        <label id="dropdown-label" for="dropdown">How many seasons does F.R.I.E.N.D.S have?</label><br>
                         <select id="dropdown" class="inputWidth" name="dropdown-list"><br>
-                            <option value="Option1">Option 1</option>
-                            <option value="Option2">Option 2</option>
-                            <option value="Option3">Option 3</option>
+                            <option value="9">9</option>
+                            <option value="11">11</option>
+                            <option value="10">10</option>
                         </select>
                     </div>
 
                     <!-- Radio -->
                     <div class="inputGroup">
                         <fieldset>
-                            <legend>The radio legend</legend>
-                            <input type="radio" id="radioone" name="radios" value="one">
-                            <label for="radioone">Radio One</label><br>
+                            <legend>Joey played Dr. Drake Ramoray on which soap opera show?</legend>
+                            <input type="radio" id="radioone" name="radios" value="Days of our lives">
+                            <label for="radioone">Days of our lives</label><br>
 
-                            <input type="radio" id="radiotwo" name="radios" value="two">
-                            <label for="radiotwo">Radio Two</label><br>
+                            <input type="radio" id="radiotwo" name="radios" value="Years of our lives">
+                            <label for="radiotwo">Years of our lives</label><br>
                         </fieldset>
                     </div>
 
                     <!-- Checkbox -->
-                    <div class="inputGroup">
+                    <div class="inputGroup spacer-top">
                         <fieldset>
-                            <legend> The checkbox legend</legend>
-                            <input type="checkbox" id="checkone" name="checks" value="checkone">
-                            <label for="checkone">Checkbox One</label><br>
+                            <legend>Which of these is not part of the series?</legend>
+                            <input type="checkbox" id="checkone" name="checks" value="Phoebe Buffay">
+                            <label for="checkone">Phoebe Buffay</label><br>
 
-                            <input type="checkbox" id="checktwo" name="checks" value="checktwo">
-                            <label for="checktwo">Checkbox Two</label><br>
+                            <input type="checkbox" id="checktwo" name="checks" value="Howard Wolowitz">
+                            <label for="checktwo">Howard Wolowitz</label><br>
 
-                            <input type="checkbox" id="checkthree" name="checks" value="checkthree">
-                            <label for="checkthree">Checkbox Three</label><br>
+                            <input type="checkbox" id="checkthree" name="checks" value="Frank Sinatra">
+                            <label for="checkthree">Frank Sinatra</label><br>
                         </fieldset>
                     </div>
 
                     <!-- Text area -->
-                    <div class="inputGroup">
+                    <div class="inputGroup spacer-top">
                         <label for="feedback">Your Feedback on this</label><br>
                         <textarea class="inputWidth" id="feedback"></textarea> 
                     </div>
@@ -78,7 +78,7 @@
                     <!-- Terms and conditions -->
                     <div class="inputGroup">
                         <input type="checkbox" id="terms" name="terms" value="terms" required>
-                        <label for="terms">I agree to the terms and conditions</label>
+                        <label for="terms">I agree to the <a href="#">terms and conditions</a></label>
                     </div>
 
                     
