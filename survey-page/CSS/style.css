@@ -5,6 +5,10 @@ body {
     margin: 0px;
     height: 100vh;
     background-color: #333333;
+    background: linear-gradient(0deg, rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("https://raw.githubusercontent.com/akashdeshpande/FCC-RWD/main/survey-page/assets/background-image.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
     font-size: 18px;
     display: flex;
     flex-direction: column;
@@ -20,18 +24,16 @@ h1 {
     text-align: center;
     color: white;
     margin-top: 40px;
-    text-shadow: 2px 2px 4px #222222;
 }
 
 #description {
     font-family: 'Nunito Sans', sans-serif;
     font-size: 20px;
     margin-top: 10px;
-    text-shadow: 2px 2px 4px #000;
 }
 
 .form-container {
-    background-color: #222222;
+    background-color: rgba(0,0,0,0.6);
     color: white;
     display: flex;
     flex-direction: column;
@@ -85,4 +87,10 @@ h1 {
     border: none;
     padding: 8px 24px;
     font-weight: 800;
+}
+
+@media (max-width: 640px) {
+    .form-container {
+        width: 100%;
+    }
 }
