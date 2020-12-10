@@ -137,7 +137,7 @@ p {
 
 .notableSongsContainer {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
   grid-gap: 60px 60px;
   margin: 30px 0px; 
 }
