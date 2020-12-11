@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    height: 56px;
+    background-color: #333333;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.headerContent {
+    margin: 0 72px;
+}
+
+.hero {
+    margin: 0px 72px;
+}
