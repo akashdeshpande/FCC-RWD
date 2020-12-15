@@ -7,10 +7,14 @@
     padding: 0;
 }
 
+img {
+    display: block;
+}
+
 /* css variables */
 :root {
     --headerHeightWide: 56px;
-    --headerHeightTall: 128px;
+    --headerHeightTall: 160px;
 }
 
 body {
@@ -45,6 +49,7 @@ body {
 
 #header-image{
     width: 26px;
+    height: 31.91px;
 }
 
 #nav-bar {
@@ -108,31 +113,30 @@ body {
     width: 50vw;
     align-self: flex-end;
 }
-/*
-.cameraSection{
-    display: flex;
-    flex-direction: row;
-    height: 100vh;
+
+.iOS14SectionContainer {
+    width: 100%;
+    background-color: #F9F9F9;
 }
 
-.cameraSectionImageWidth {
+.iOS14TextContainer {
+    text-align: center;
+}
+
+.iOS14Text {
+    font-size: 10vh;
+    padding-top: 8vw;
+}
+
+.iOS14TextSubheading {
+    font-size: 4vh;
+    margin-top: 1vw;
+    padding-bottom: 8vw;
+}
+
+.iOS14Image {
     width: 100%;
 }
-
-.cameraSectionImageContainer {
-    display: flex;
-    align-self: flex-end;
-    flex: 0 1 60%;
-}
-
-.cameraSectionTextContainer {
-    display: flex;
-    flex-direction: column;
-    text-align: right;
-    align-self: center;
-    flex: 0 1 60%;
-}
-*/
 
 @media (min-aspect-ratio: 18/9) {
     /* aspect width is greater than 16:9 */
@@ -141,7 +145,7 @@ body {
         height: 80vh;
     }
     .heroText {
-        font-size: 11vh;
+        font-size: 10vh;
     }
 }
 
@@ -159,27 +163,33 @@ body {
     .heroImageContainer {
         align-self: center;
     }
+    .iOS14Text {
+        font-size: 10vw;
+    }
+    .iOS14TextSubheading {
+        font-size: 3vw;
+    }
 }
 
 @media (max-aspect-ratio: 4/5) {
+    /* aspect width is smaller than 16:9 */
     .headerContent{
         flex-direction: column;
         align-items: center;
     }
     .header{
-        height: 128px;
+        height: var(--headerHeightTall);
     }
     #nav-bar {
         flex-direction: column;
-        margin-top: 6px;
+        margin-top: 12px;
     }
     #nav-bar .nav-link {
         margin-left: 0px;
-        margin-top: 6px;
+        margin-top: 8px;
     }
     .features{
-        margin-top: 128px;
+        margin-top: var(--headerHeightTall);
         height: calc(100vh - var(--headerHeightTall));
     }
-
 }
