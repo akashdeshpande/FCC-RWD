@@ -7,7 +7,11 @@
     padding: 0;
 }
 
-
+/* css variables */
+:root {
+    --headerHeightWide: 56px;
+    --headerHeightTall: 128px;
+}
 
 body {
     font-family: "Montserrat", sans-serif;
@@ -20,7 +24,7 @@ body {
 }
 
 .header {
-    height: 56px;
+    height: var(--headerHeightWide);
     background-color: #333333;
     color: white;
     display: flex;
@@ -56,8 +60,8 @@ body {
 
 .features {
     margin: 0 72px;
-    margin-top: 56px;
-    height: calc(100vh - 56px);
+    margin-top: var(--headerHeightWide);
+    height: calc(100vh - var(--headerHeightWide));
 }
 
 .hero {
@@ -68,7 +72,6 @@ body {
 }
 
 .heroTextContainer {
-    width: 500px;
     align-self: center;
     display: flex;
     flex-direction: column;
@@ -176,7 +179,7 @@ body {
     }
     .features{
         margin-top: 128px;
-        height: calc(100vh - 128px);
+        height: calc(100vh - var(--headerHeightTall));
     }
 
 }
