@@ -1,3 +1,10 @@
+/* todo 
+center video
+add side padding on new sections
+center the whole thing
+
+*/
+
 /* font imports */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
@@ -15,6 +22,7 @@ img {
 :root {
     --headerHeightWide: 56px;
     --headerHeightTall: 160px;
+    --pageSidePadding: 0 72px;
 }
 
 body {
@@ -34,7 +42,7 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 0 72px;
+    padding: var(--pageSidePadding);
     width: 100%;
     position: fixed;
     box-sizing: border-box;
@@ -64,7 +72,7 @@ body {
 }
 
 .features {
-    margin: 0 72px;
+    padding: var(--pageSidePadding);
     margin-top: var(--headerHeightWide);
     height: calc(100vh - var(--headerHeightWide));
 }
@@ -121,10 +129,11 @@ body {
 
 .iOS14TextContainer {
     text-align: center;
+    padding: var(--pageSidePadding);
 }
 
 .iOS14Text {
-    font-size: 10vh;
+    font-size: 8vh;
     padding-top: 8vw;
 }
 
@@ -136,6 +145,19 @@ body {
 
 .iOS14Image {
     width: 100%;
+}
+
+.videoContainer {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 8vw;
+}
+
+.video {
+    width: 80vw;
+    height: 45vw;
+    border: none;
 }
 
 @media (min-aspect-ratio: 18/9) {
@@ -164,7 +186,7 @@ body {
         align-self: center;
     }
     .iOS14Text {
-        font-size: 10vw;
+        font-size: 5vw;
     }
     .iOS14TextSubheading {
         font-size: 3vw;
