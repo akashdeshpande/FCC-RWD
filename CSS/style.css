@@ -1,0 +1,51 @@
+/* imports */
+
+/* global */
+:root {
+    --headerWidth: 72px;
+    --sidePadding: 0 72px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* styling */
+body {
+    font-family: "Montserrat", sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    height: var(--headerWidth);
+    background-color: whitesmoke;
+    padding: var(--sidePadding);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.projects {
+    height: calc(100vh - var(--headerWidth));
+    background-color: #333333;
+    color: wheat;
+}
+
+.project {
+    width: 300px;
+    height: 200px;
+    background-color: #444444;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.projectImage{
+
+}
+
+.projectTitle{
+    
+}
