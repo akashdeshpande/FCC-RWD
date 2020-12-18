@@ -4,18 +4,27 @@
     <link rel="stylesheet" href="CSS/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 <body>
-    <header class="header">
+    <header id="header" class="header">
         <div class="headerContent">
-            <img id="header-image" src="https://github.com/akashdeshpande/FCC-RWD/blob/main/product-landing-page/assets/apple-logo.png?raw=true" alt="Apple Company logo">
+            <img id="header-img" src="https://github.com/akashdeshpande/FCC-RWD/blob/main/product-landing-page/assets/apple-logo.png?raw=true" alt="Apple Company logo">
             <nav id="nav-bar">
-                <ul class="nav-link">Features</ul>
-                <ul class="nav-link">In Action</ul>
-                <ul class="nav-link">Contact us</ul>
+                <ul>
+                    <li>
+                        <a class="nav-link" href="#features">Features</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#in-action">In Action</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#contact-us">Contact us</a>
+                    </li>
+                </ul>
             </nav>
         </div>
     </header>
+
+    <!-- features section -->
     <section class="features">
         <div class="hero">
             <div class="heroTextContainer">
@@ -27,38 +36,46 @@
             </figure>
         </div>
     </section>
+
     <!-- ios 14 section -->
-    <div class="iOS14SectionContainer">
-        <div class="iOS14TextContainer">
-            <h2 class="iOS14Text">iOS 14</h2>
-            <p class="iOS14TextSubheading">New and better widgets, specially designed for the iPhone, widgets everywhere!</p>
+    <section id="features">
+        <div class="iOS14SectionContainer">
+            <div class="iOS14TextContainer">
+                <h2 class="iOS14Text">iOS 14</h2>
+                <p class="iOS14TextSubheading">New and better widgets, specially designed for the iPhone, widgets everywhere!</p>
+            </div>
         </div>
-    </div>
-    <figure>
-        <img class="iOS14Image" alt="iOS 14 features" src="https://raw.githubusercontent.com/akashdeshpande/FCC-RWD/main/product-landing-page/assets/ios%2014%20features.png">
-    </figure>
-    
+        <figure>
+            <img class="iOS14Image" alt="iOS 14 features" src="https://raw.githubusercontent.com/akashdeshpande/FCC-RWD/main/product-landing-page/assets/ios%2014%20features.png">
+        </figure>
+    </section>
+
     <!-- how it works section -->
-    <div class="iOS14SectionContainer">
-        <div class="iOS14TextContainer">
-            <h2 class="iOS14Text">Watch it in action</h2>
-            <p class="iOS14TextSubheading">The new iPhone is magnificent. We love it and we know you will too! Play the video below to see the iPhone in action.</p>
+    <section id="in-action">
+        <div class="iOS14SectionContainer">
+            <div class="iOS14TextContainer">
+                <h2 class="iOS14Text">Watch it in action</h2>
+                <p class="iOS14TextSubheading">The new iPhone is magnificent. We love it and we know you will too! Play the video below to see the iPhone in action.</p>
+            </div>
+            <div class="videoContainer">
+                <iframe id="video" class="video" src="https://www.youtube.com/embed/cnXapYkboRQ"></iframe>
+            </div>
         </div>
-        <div class="videoContainer">
-            <iframe class="video" src="https://www.youtube.com/embed/cnXapYkboRQ"></iframe>
-        </div>
-    </div>
+    </section>
 
     <!-- get in touch section -->
-    <div class="contactUsSection">
-        <div class="iOS14TextContainer noPadding">
-            <h2 class="iOS14Text">Get in touch with us</h2>
-            <p class="iOS14TextSubheading">Send us your email from the form below, and we will get in touch with you soon!</p>
+    <section id="contact-us">
+        <div class="contactUsSection">
+            <div class="iOS14TextContainer noPadding">
+                <h2 class="iOS14Text">Get in touch with us</h2>
+                <p class="iOS14TextSubheading">Send us your email from the form below, and we will get in touch with you soon!</p>
+            </div>
+            <form id="form" class="contactUsForm" action="https://www.freecodecamp.com/email-submit">
+                <input id="email" class="emailInput" type="email" name="email" placeholder="Enter your email...">
+                <input id="submit" class="submitButton" type="submit" value="Send">
+            </form>
         </div>
-        <form class="contactUsForm" action="https://www.freecodecamp.com/email-submit">
-            <input class="emailInput" type="email" name="email" placeholder="Enter your email...">
-            <input class="submitButton" type="submit" value="Send">
-        </form>
-    </div>
+    </section>
 </body>
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </html>

@@ -23,6 +23,10 @@ input:focus {
     --pageSidePaddingTall: 0 32px;
 }
 
+html {
+    scroll-behavior: smooth
+}
+
 body {
     font-family: "Montserrat", sans-serif;
     font-size: 16px;
@@ -53,7 +57,7 @@ body {
     width: 100%;
 }
 
-#header-image{
+#header-img{
     width: 26px;
     height: 31.91px;
 }
@@ -63,11 +67,20 @@ body {
     align-items: center;
 }
 
-#nav-bar .nav-link {
-    text-decoration: none;
+#nav-bar ul {
+    list-style-type: none;
+    display: flex;
+}
+
+#nav-bar ul li {
     font-weight: 700;
     margin-left: 48px;
     font-size: 16px;
+}
+
+#nav-bar ul li a {
+    text-decoration: none;
+    color: white;
 }
 
 .features {
@@ -261,11 +274,12 @@ body {
     .header{
         height: var(--headerHeightTall);
     }
-    #nav-bar {
+    #nav-bar ul {
         flex-direction: column;
         margin-top: 12px;
+        align-items: center;
     }
-    #nav-bar .nav-link {
+    #nav-bar ul li {
         margin-left: 0px;
         margin-top: 8px;
     }
@@ -284,13 +298,15 @@ body {
     .header{
         height: var(--headerHeightTall);
     }
-    #nav-bar {
+    #nav-bar ul {
         flex-direction: column;
+        align-items: center;
         margin-top: 12px;
     }
-    #nav-bar .nav-link {
+    #nav-bar ul li {
         margin-left: 0px;
         margin-top: 8px;
+        font-size: 3vw;
     }
     .features{
         margin-top: var(--headerHeightTall);
@@ -311,6 +327,9 @@ body {
     .contactUsSection {
         padding: var(--pageSidePaddingTall);
     }
+    #nav-bar ul li{
+        font-size: 4vw;
+    }
 }
 
 @media (max-aspect-ratio: 5/8) {
@@ -324,5 +343,8 @@ body {
     .blueButton{
         font-size: 4vw;
         margin-top: 4vw;
+    }
+    #nav-bar ul {
+        font-size: 5vw;
     }
 }
