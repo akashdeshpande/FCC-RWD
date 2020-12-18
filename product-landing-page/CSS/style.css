@@ -313,7 +313,7 @@ body {
     }
 }
 
-@media (max-aspect-ratio: 9/16) {
+@media (max-aspect-ratio: 5/8) {
     .imageSizing{
         width: 70vw;
     }
