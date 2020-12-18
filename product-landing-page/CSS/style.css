@@ -11,11 +11,16 @@ img {
     display: block;
 }
 
+input:focus {
+    outline: none;
+}
+
 /* css variables */
 :root {
     --headerHeightWide: 56px;
     --headerHeightTall: 160px;
     --pageSidePadding: 0 72px;
+    --pageSidePaddingTall: 0 32px;
 }
 
 body {
@@ -62,6 +67,7 @@ body {
     text-decoration: none;
     font-weight: 700;
     margin-left: 48px;
+    font-size: 16px;
 }
 
 .features {
@@ -85,6 +91,7 @@ body {
 
 .heroText {
     font-size: 5vw;
+    padding-right: 12px;
 }
 
 .blueButton {
@@ -111,7 +118,7 @@ body {
 }
 
 .imageSizing {
-    width: 50vw;
+    width: 45vw;
     align-self: flex-end;
 }
 
@@ -240,6 +247,9 @@ body {
         flex-direction: column;
         align-items: center;
     }
+    .blueButton{
+        font-size: 3vw;
+    }
 }
 
 @media (max-aspect-ratio: 4/5) {
@@ -262,5 +272,57 @@ body {
     .features{
         margin-top: var(--headerHeightTall);
         height: calc(100vh - var(--headerHeightTall));
+    }
+}
+
+@media (max-aspect-ratio: 1/1) {
+    /* screen is square */
+    .headerContent{
+        flex-direction: column;
+        align-items: center;
+    }
+    .header{
+        height: var(--headerHeightTall);
+    }
+    #nav-bar {
+        flex-direction: column;
+        margin-top: 12px;
+    }
+    #nav-bar .nav-link {
+        margin-left: 0px;
+        margin-top: 8px;
+    }
+    .features{
+        margin-top: var(--headerHeightTall);
+        height: calc(100vh - var(--headerHeightTall));
+    }
+}
+
+@media (max-aspect-ratio: 7/10) {
+    .header {
+        padding: var(--pageSidePaddingTall);
+    }
+    .features {
+        padding: var(--pageSidePaddingTall);
+    }
+    .iOS14TextContainer {
+        padding: var(--pageSidePaddingTall);
+    }
+    .contactUsSection {
+        padding: var(--pageSidePaddingTall);
+    }
+}
+
+@media (max-aspect-ratio: 9/16) {
+    .imageSizing{
+        width: 70vw;
+    }
+    .heroText{
+        font-size: 7vw;
+        padding-right: unset;
+    }
+    .blueButton{
+        font-size: 4vw;
+        margin-top: 4vw;
     }
 }
