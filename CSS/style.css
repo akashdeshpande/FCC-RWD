@@ -2,8 +2,12 @@
 
 /* global */
 :root {
-    --headerWidth: 72px;
+    --headerHeight: 72px;
     --sidePadding: 0 72px;
+    --defaultDarkColor: #444444;
+    --defaultBrightColor: #FEFEFE;
+    --defaultLightGrey: #EEEEEE;
+    --projectsContainerPadding: 144px 72px 72px 72px;
 }
 
 * {
@@ -16,36 +20,52 @@ body {
     font-family: "Montserrat", sans-serif;
     display: flex;
     flex-direction: column;
+    color: var(--defaultDarkColor);
 }
 
 header {
-    height: var(--headerWidth);
-    background-color: whitesmoke;
+    height: var(--headerHeight);
+    background-color: var(--defaultLightGrey);
     padding: var(--sidePadding);
     display: flex;
     justify-content: center;
     align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
 .projects {
-    height: calc(100vh - var(--headerWidth));
-    background-color: #333333;
-    color: wheat;
+    box-sizing: border-box;
+    height: 100vh;
+    background-color: var(--defaultBrightColor);
+    padding: var(--projectsContainerPadding);
 }
 
 .project {
-    width: 300px;
-    height: 200px;
-    background-color: #444444;
+    width: 336px;
+    height: 208px;
+    background-color: var(--defaultLightGrey);
     border-radius: 16px;
-    display: flex;
-    flex-direction: column;
+    position: relative;
 }
 
 .projectImage{
-
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    text-align: center;
 }
 
 .projectTitle{
-    
+    position: absolute;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    bottom: 12px;
+    font-size: 18px;
 }
