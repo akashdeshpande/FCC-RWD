@@ -1,13 +1,16 @@
 /* imports */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 /* global */
 :root {
     --headerHeight: 72px;
-    --sidePadding: 0 72px;
+    --sidePaddingDesktop: 0 72px;
+    --sidePaddingMobile: 0 36px;
     --defaultDarkColor: #444444;
-    --defaultBrightColor: #FEFEFE;
+    --defaultBrightColor: #FAFAFA;
     --defaultLightGrey: #EEEEEE;
-    --projectsContainerPadding: 144px 72px 72px 72px;
+    --projectsContainerPaddingDesktop: 144px 72px 72px 72px;
+    --projectsContainerPaddingMobile: 108px 36px 72px 36px;
 }
 
 * {
@@ -15,36 +18,43 @@
     padding: 0;
 }
 
+h1 {
+    font-weight: 700;
+}
+
 /* styling */
 body {
     font-family: "Montserrat", sans-serif;
     display: flex;
     flex-direction: column;
+    background-color: var(--defaultBrightColor);
+    font-weight: 400;
     color: var(--defaultDarkColor);
 }
 
 header {
     height: var(--headerHeight);
     background-color: var(--defaultLightGrey);
-    padding: var(--sidePadding);
+    padding: var(--sidePaddingDesktop);
     display: flex;
     justify-content: center;
     align-items: center;
     position: fixed;
     top: 0;
     width: 100%;
+    box-sizing: border-box;
 }
 
 .projects {
     box-sizing: border-box;
-    height: 100vh;
-    background-color: var(--defaultBrightColor);
-    padding: var(--projectsContainerPadding);
+    padding: var(--projectsContainerPaddingDesktop);
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 32px;
 }
 
 .project {
-    width: 336px;
-    height: 208px;
+    height: 256px;
     background-color: var(--defaultLightGrey);
     border-radius: 18px;
     position: relative;
@@ -58,17 +68,16 @@ header {
     top: 0;
     left: 0;
     text-align: center;
-    background: url("https://raw.githubusercontent.com/akashdeshpande/FCC-RWD/main/tribute-page/images/album-covers/what-ive-done.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
     border-radius: 16px;
 }
 
-.project .blackGradientOverlay{
+.blackGradientOverlay{
     position: absolute;
     text-align: center;
-    height: 50%;
+    height: 40%;
     width: 100%;
     bottom: 0;
     left: 0;
@@ -79,7 +88,7 @@ header {
     transition: opacity 0.3s ease;
 }
 
-.project .projectTitle{
+.projectTitle{
     position: absolute;
     text-align: center;
     box-sizing: border-box;
@@ -104,4 +113,96 @@ header {
 
 .project:hover .projectTitle{
     opacity: 0;
+}
+
+@media(min-width: 1200px) {
+    .project{
+        grid-column: span 4;
+        height: 16vw;
+    }
+}
+
+
+@media(max-width: 1200px) {
+    .project{
+        grid-column: span 6;
+        height: 24vw;
+    }
+}
+
+@media(max-width: 992px) {
+    .project{
+        grid-column: span 6;
+    }
+    .projects{
+        padding: 108px 72px 72px 72px;
+    }
+}
+
+@media(max-width: 768px) {
+    .project{
+        grid-column: span 12;
+        height: 44vw;
+    }
+}
+
+@media(max-width:  576px) {
+    .project{
+        grid-column: span 12;
+    }
+    .projects{
+        grid-column-gap: 0;
+        grid-row-gap: 32px;
+        padding: var(--projectsContainerPaddingMobile);
+    }
+    header {
+        padding: var(--sidePaddingMobile);
+    }
+    header h1{
+        font-size: 28px;
+    }
+    .projectTitle{
+        font-size: 14px;
+    }
+    .blackGradientOverlay{
+        height: 50%;
+    }
+}
+
+@media (max-width: 500px) {
+    header h1 {
+        font-size: 20px;
+    }
+}
+@media(max-width:  320px) {
+    .project{
+        grid-column: span 12;
+        height: 34vw;
+    }
+}
+
+
+/* project images */
+.project1 {
+    background: #808080 url("https://raw.githubusercontent.com/akashdeshpande/FCC-RWD/main/tribute-page/images/album-covers/what-ive-done.jpg") no-repeat top/cover;
+}
+
+.project2{
+    background: #143083 url("https://raw.githubusercontent.com/akashdeshpande/FCC-RWD/main/tribute-page/images/chester-hero.jpg") no-repeat top/cover;
+}
+
+.project3 {
+    background: #808080 url("https://raw.githubusercontent.com/akashdeshpande/FCC-RWD/main/survey-page/assets/background-image.jpg") no-repeat top/cover;
+}
+
+.project4{
+    background: #143083 url("https://raw.githubusercontent.com/akashdeshpande/FCC-RWD/main/tribute-page/images/album-covers/castle-of-glass.jpg") no-repeat top/cover;
+}
+
+.project5 {
+    background: #808080 url("https://raw.githubusercontent.com/akashdeshpande/FCC-RWD/main/tribute-page/images/album-covers/numb.jpg") no-repeat top/cover;
+}
+
+.project6{
+    background: #143083 url("https://raw.githubusercontent.com/akashdeshpande/FCC-RWD/main/tribute-page/images/album-covers/in-the-end.jpg") no-repeat top/cover;
 }
