@@ -9,8 +9,8 @@
     --defaultDarkColor: #444444;
     --defaultBrightColor: #FAFAFA;
     --defaultLightGrey: #EEEEEE;
-    --projectsContainerPaddingDesktop: 144px 72px 72px 72px;
-    --projectsContainerPaddingMobile: 108px 36px 72px 36px;
+    --projectsContainerPaddingDesktop: 120px 72px 98px 72px;
+    --projectsContainerPaddingMobile: 108px 36px 108px 36px;
 }
 
 * {
@@ -19,6 +19,7 @@
 }
 
 h1 {
+    font-size: 28px;
     font-weight: 700;
 }
 
@@ -32,17 +33,26 @@ body {
     color: var(--defaultDarkColor);
 }
 
-header {
-    height: var(--headerHeight);
+.headerFooterCommonProperties {
     background-color: var(--defaultLightGrey);
-    padding: var(--sidePaddingDesktop);
     display: flex;
     justify-content: center;
     align-items: center;
     position: fixed;
-    top: 0;
     width: 100%;
     box-sizing: border-box;
+}
+
+header {
+    height: var(--headerHeight);
+    padding: var(--sidePaddingDesktop);
+    top: 0;
+    z-index: 999;
+}
+
+footer {
+    bottom: 0;
+    height: 48px;
 }
 
 .projects {
@@ -113,6 +123,27 @@ header {
 
 .project:hover .projectTitle{
     opacity: 0;
+}
+
+.footerIconContainer {
+    width: 200px;
+    display: flex;
+    justify-content: center;
+}
+
+.footerIconContainer ul {
+    list-style: none;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footerIconContainer ul li {
+    display: inline;
+}
+
+.footerIconContainer ul li a {
+    color: var(--defaultDarkColor);
 }
 
 @media(min-width: 1200px) {
