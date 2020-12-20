@@ -46,8 +46,9 @@ header {
     width: 336px;
     height: 208px;
     background-color: var(--defaultLightGrey);
-    border-radius: 16px;
+    border-radius: 18px;
     position: relative;
+    cursor: pointer;
 }
 
 .projectImage{
@@ -57,15 +58,50 @@ header {
     top: 0;
     left: 0;
     text-align: center;
+    background: url("https://raw.githubusercontent.com/akashdeshpande/FCC-RWD/main/tribute-page/images/album-covers/what-ive-done.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    border-radius: 16px;
 }
 
-.projectTitle{
+.project .blackGradientOverlay{
     position: absolute;
     text-align: center;
-    height: 100%;
+    height: 50%;
     width: 100%;
-    top: 0;
+    bottom: 0;
     left: 0;
-    bottom: 12px;
     font-size: 18px;
+    background: linear-gradient(0deg, rgba(0,0,0,1), rgba(0,0,0,0));
+    border-radius: 0px 0px 16px 16px;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.project .projectTitle{
+    position: absolute;
+    text-align: center;
+    box-sizing: border-box;
+    height: max-content;
+    width: 100%;
+    bottom:0;
+    left: 0;
+    font-size: 18px;
+    color: var(--defaultBrightColor);
+    padding: 24px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    opacity: 1;
+    user-select: none;
+    transition: opacity 0.3s ease;
+}
+
+.project:hover .blackGradientOverlay{
+    opacity: 0;
+}
+
+.project:hover .projectTitle{
+    opacity: 0;
 }
