@@ -15,9 +15,26 @@ h1, h2, h3 {
     padding: 0;
 }
 
+h1 {
+    font-size: 52px;
+}
+
+.headerText {
+    font-family: "Zilla Slab", serif;
+    font-size: 36px;
+    margin: 8px 0;
+    line-height: initial;
+}
+
 table, th, td {
     border: 1px solid black;
-  }
+}
+
+article {
+    margin: 0 24px;
+    text-align: justify;
+}
+
 /* rules */
 
 .gridContainer{
@@ -30,8 +47,9 @@ table, th, td {
 #navbar {
     background-color: #333;
     display: grid;
-    grid-template-rows: 4em 1fr;
+    grid-template-rows: 100px 1fr;
     color: white;
+    overflow-y: scroll;
 }
 
 .title {
@@ -40,6 +58,7 @@ table, th, td {
     justify-items: center;
     align-items: center;
     font-size: 1.6em;
+    grid-template-rows: 1fr 2px;
 }
 
 .title::after{
@@ -51,7 +70,7 @@ table, th, td {
 
 .index ul {
     display: grid;
-    grid-template-rows: repeat(14, 38px);
+    grid-template-rows: repeat(14, 56px);
     list-style: none;
     padding: 0px 16px;
     align-items: center;
@@ -76,4 +95,8 @@ table, th, td {
 #main-doc {
     background-color: #eee;
     padding: 12px 24px;
+    display: grid;
+    grid-row-gap: 32px;
+    overflow-y: scroll;
+    line-height: 20px;
 }

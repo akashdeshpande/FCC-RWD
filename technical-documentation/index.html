@@ -15,27 +15,27 @@
             <div class="index">
                 <ul>
                     <li><a class="nav-link" href="#Why_Flexbox">Why Flexbox?</a></li>
-                    <li><a class="nav-link" href="#">Introducing a simple example</a></li>
-                    <li><a class="nav-link" href="#">Specifying what elements to lay out as flexible boxes</a></li>
-                    <li><a class="nav-link" href="#">The flex model</a></li>
-                    <li><a class="nav-link" href="#">Columns or rows?</a></li>
-                    <li><a class="nav-link" href="#">Wrapping</a></li>
-                    <li><a class="nav-link" href="#">flex-flow shorthand</a></li>
-                    <li><a class="nav-link" href="#">Flexible sizing of flex items</a></li>
-                    <li><a class="nav-link" href="#">flex: shorthand versus longhand</a></li>
-                    <li><a class="nav-link" href="#">Horizontal and vertical alignment</a></li>
-                    <li><a class="nav-link" href="#">Ordering flex items</a></li>
-                    <li><a class="nav-link" href="#">Nested flex boxes</a></li>
-                    <li><a class="nav-link" href="#">Cross-browser compatibility</a></li>
-                    <li><a class="nav-link" href="#">Test your skills!</a></li>
+                    <li><a class="nav-link" href="#Introducing_a_simple_example">Introducing a simple example</a></li>
+                    <li><a class="nav-link" href="#Specifying_what_elements_to_lay_out_as_flexible_boxes">Specifying what elements to lay out as flexible boxes</a></li>
+                    <li><a class="nav-link" href="#The_flex_model">The flex model</a></li>
+                    <li><a class="nav-link" href="#Columns_or_rows?">Columns or rows?</a></li>
+                    <li><a class="nav-link" href="#Wrapping">Wrapping</a></li>
+                    <li><a class="nav-link" href="#flex-flow_shorthand">flex-flow shorthand</a></li>
+                    <li><a class="nav-link" href="#Flexible_sizing_of_flex_items">Flexible sizing of flex items</a></li>
+                    <li><a class="nav-link" href="#flex:_shorthand_versus_longhand">flex: shorthand versus longhand</a></li>
+                    <li><a class="nav-link" href="#Horizontal_and_vertical_alignment">Horizontal and vertical alignment</a></li>
+                    <li><a class="nav-link" href="#Ordering_flex_items">Ordering flex items</a></li>
+                    <li><a class="nav-link" href="#Nested_flex_boxes">Nested flex boxes</a></li>
+                    <li><a class="nav-link" href="#Cross-browser_compatibility">Cross-browser compatibility</a></li>
+                    <li><a class="nav-link" href="#Test_your_skills!">Test your skills!</a></li>
                     </ul>
             </div>
         </nav>
         <main id="main-doc">
             <section class="">
-                <h2>
+                <header class="headerText">
                     Flexbox
-                </h2>
+                </header>
                 <article>
                     <p>
                         Flexbox is a one-dimensional layout method for laying out items in rows or columns. Items flex to fill additional space and shrink to fit into smaller spaces. This article explains all the fundamentals.
@@ -58,13 +58,26 @@
             </section>
             
             <section class="main-section" id="Why_Flexbox">
-                <h2>Why Flexbox</h2>
+                <header class="headerText">Why Flexbox</header>
                 <article>
                     <p>
-                        Some text
+                        For a long time, the only reliable cross browser-compatible tools available for creating CSS layouts were things like <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Floats">floats</a> and <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Positioning">positioning.</a> These are fine, and they work, but in some ways they are also rather limiting and frustrating.
+                    </p>
+                    <p>
+                        The following simple layout requirements are either difficult or impossible to achieve with such tools, in any kind of convenient, flexible way:
+                    </p>
+                    <ul>
+                        <li>Vertically centering a block of content inside its parent.</li>
+                        <li>Making all the children of a container take up an equal amount of the available width/height, regardless of how much width/height is available.</li>
+                        <li>Making all columns in a multiple-column layout adopt the same height even if they contain a different amount of content.</li>
+                    </ul>
+                    <p>
+                        As you'll see in subsequent sections, flexbox makes a lot of layout tasks much easier. Let's dig in!
                     </p>
                 </article>
             </section>
+
+            
         </main>
     </div>
 </body>
