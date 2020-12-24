@@ -14,6 +14,10 @@ h1, h2, h3 {
     margin: 0;
     padding: 0;
 }
+
+table, th, td {
+    border: 1px solid black;
+  }
 /* rules */
 
 .gridContainer{
@@ -30,7 +34,7 @@ h1, h2, h3 {
     color: white;
 }
 
-.logo {
+.title {
     color: wheat;
     display: grid;
     justify-items: center;
@@ -38,7 +42,7 @@ h1, h2, h3 {
     font-size: 1.6em;
 }
 
-.logo::after{
+.title::after{
     content: "";
     height: 2px;
     width: 100%;
@@ -65,6 +69,11 @@ h1, h2, h3 {
     text-decoration: none;
 }
 
+.index ul li a:hover {
+    text-decoration: underline;
+}
+
 #main-doc {
     background-color: #eee;
+    padding: 12px 24px;
 }
