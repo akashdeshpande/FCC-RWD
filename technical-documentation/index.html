@@ -97,7 +97,29 @@
             <section class="main-section" id="#Specifying_what_elements_to_lay_out_as_flexible_boxes">
                 <header class="headerText">Specifying what elements to lay out as flexible boxes</header>
                 <article>
-                    
+                    <p>
+                        To start with, we need to select which elements are to be laid out as flexible boxes. To do this, we set a special value of display on the parent element of the elements you want to affect. In this case we want to lay out the <pre><code><a href="">&ltarticle&gt</a></code> elements, so we set this on the <code><a href="">&ltsection&gt</a></code>:
+                    </p>
+                    <pre>
+                        <code>
+                            section {
+                                display: flex;
+                            }
+                        </code>
+                    </pre> 
+                    <p>
+                        This causes the <section> element to become a flex container, and its children to become flex items. The result of this should be something like so:
+                    </p>
+                    <figure>
+                        <img alt="A sample flexbox image" src="https://media.prod.mdn.mozit.cloud/attachments/2016/06/21/13408/716e67fb3ceb12d91c318cb673ddcfce/flexbox-example2.png">
+                        <figcaption>A sample flexbox image</figcaption> 
+                    </figure>
+                    <p>
+                        So, this single declaration gives us everything we need — incredible, right? We have our multiple column layout with equal-sized columns, and the columns are all the same height. This is because the default values given to flex items (the children of the flex container) are set up to solve common problems such as this.
+                    </p>
+                    <p>
+                        To be clear, let's reiterate what is happening here. The element we've given a   display value of flex to is acting like a block-level element in terms of how it interacts with the rest of the page, but its children are being laid out as flex items. The next section will explain in more detail what this means. Note also that you can use a display value of inline-flex if you wish to lay out an element's children as flex items, but have that element behave like an inline element.
+                    </p>
                 </article>
             </section>
 
