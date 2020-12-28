@@ -27,11 +27,11 @@
                     <li><a class="nav-link" href="#Ordering_flex_items">Ordering flex items</a></li>
                     <li><a class="nav-link" href="#Nested_flex_boxes">Nested flex boxes</a></li>
                     <li><a class="nav-link" href="#Cross-browser_compatibility">Cross-browser compatibility</a></li>
-                    <li><a class="nav-link" href="#Test_your_skills!">Test your skills!</a></li>
                     </ul>
             </div>
         </nav>
         <main id="main-doc">
+            <!-- 0. Preface Section -->
             <section class="">
                 <header class="headerText">
                     Flexbox
@@ -57,7 +57,7 @@
                 </article>
             </section>
             
-
+            <!-- 1. Why Flexbox -->
             <section class="main-section" id="Why_Flexbox">
                 <header class="headerText">Why Flexbox</header>
                 <article>
@@ -78,7 +78,7 @@
                 </article>
             </section>
 
-
+            <!-- 2. Introducing a simple example -->
             <section class="main-section" id="#Introducing_a_simple_example">
                 <header class="headerText">Introducing a simple example</header>
                 <article>
@@ -89,16 +89,16 @@
                         <img alt="Image showing the starting point of Flexbox tutorial" src="https://i.imgur.com/Bih741v.png">
                         <figcaption>Image showing the starting point of Flexbox tutorial</figcaption> 
                     </figure>
-                    <p>You'll see that we have a <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/header"><code>&ltheader&gt</code></a> element with a top level heading inside it, and a <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/section"><code>&ltsection&gt</code></a> element containing three <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/article"><code>&ltarticle&gt</code></a>s. We are going to use these to create a fairly standard three column layout.</p>
+                    <p>You'll see that we have a <code>&ltheader&gt</code> element with a top level heading inside it, and a <code>&ltsection&gt</code> element containing three <code>&ltarticle&gt</code>s. We are going to use these to create a fairly standard three column layout.</p>
                 </article>
             </section>
 
-
+            <!-- 3. Specifying what elements to lay out as flexible items -->
             <section class="main-section" id="#Specifying_what_elements_to_lay_out_as_flexible_boxes">
                 <header class="headerText">Specifying what elements to lay out as flexible boxes</header>
                 <article>
                     <p>
-                        To start with, we need to select which elements are to be laid out as flexible boxes. To do this, we set a special value of display on the parent element of the elements you want to affect. In this case we want to lay out the <pre><code><a href="">&ltarticle&gt</a></code> elements, so we set this on the <code><a href="">&ltsection&gt</a></code>:
+                        To start with, we need to select which elements are to be laid out as flexible boxes. To do this, we set a special value of display on the parent element of the elements you want to affect. In this case we want to lay out the <code>&ltarticle&gt</code> elements, so we set this on the <code>&ltsection&gt</code>:
                     </p>
                     <pre>
                         <code>
@@ -106,9 +106,9 @@
                                 display: flex;
                             }
                         </code>
-                    </pre> 
+                    </pre>
                     <p>
-                        This causes the <section> element to become a flex container, and its children to become flex items. The result of this should be something like so:
+                        This causes the <code>&ltsection&gt</code> element to become a flex container, and its children to become flex items. The result of this should be something like so:
                     </p>
                     <figure>
                         <img alt="A sample flexbox image" src="https://media.prod.mdn.mozit.cloud/attachments/2016/06/21/13408/716e67fb3ceb12d91c318cb673ddcfce/flexbox-example2.png">
@@ -122,9 +122,117 @@
                     </p>
                 </article>
             </section>
+            
+            <!-- 4. The flex model -->
+            <section class="main-section" id="#The_flex_model">
+                <header class="headerText">The flex model</header>
+                <article>
+                    <p>
+                        When elements are laid out as flex items, they are laid out along two axes:
+                    </p>
+                    <figure>
+                        <img alt="Image showing flexbox terms" src="https://media.prod.mdn.mozit.cloud/attachments/2012/07/09/3739/97750afee8f091f8b82864be884a3695/flex_terms.png">
+                        <figcaption>Image showing flexbox terms</figcaption> 
+                    </figure>
+                    <ul>
+                        <li>
+                            The main axis is the axis running in the direction the flex items are being laid out in (e.g. as rows across the page, or columns down the page.) The start and end of this axis are called the main start and main end.
+                        </li>
+                        <li>
+                            The cross axis is the axis running perpendicular to the direction the flex items are being laid out in. The start and end of this axis are called the cross start and cross end.
+                        </li>
+                        <li>
+                            The parent element that has <code>display: flex</code> set on it (the <code>&ltsection&gt</code> in our example) is called the flex container.
+                            The items being laid out as flexible boxes inside the flex container are called flex items (the <code>&ltarticle&gt</code> elements in our example).
+                        </li>
+                    </ul>
+                    <p>
+                        Bear this terminology in mind as you go through subsequent sections. You can always refer back to it if you get confused about any of the terms being used.
+                    </p>
+                </article>
+            </section>
+
+            <!-- 5. Columns or rows -->
+            <section class="main-section" id="#Columns_or_rows?">
+                <header class="headerText">Columns or rows?</header>
+                <article>
+                    <p>
+                        Flexbox provides a property called <code>flex-direction</code> that specifies what direction the main axis runs in (what direction the flexbox children are laid out in) — by default this is set to row, which causes them to be laid out in a row in the direction your browser's default language works in (left to right, in the case of an English browser).
+                    </p>
+                    <p>
+                        Try adding the following declaration to your &ltsection&gt rule:
+                    </p>
+                    <pre><code>flex-direction: column;</code></pre>
+                    <p>
+                        You'll see that this puts the items back in a column layout, much like they were before we added any CSS. Before you move on, delete this declaration from your example.
+                    </p>
+                </article>
+            </section>
+
+            <!-- 6. Wrapping -->
+            <section class="main-section" id="#Wrapping">
+                <header class="headerText">Wrapping</header>
+                <article>
+                    <p>
+                        One issue that arises when you have a fixed amount of width or height in your layout is that eventually your flexbox children will overflow their container, breaking the layout. Have a look at our <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flexbox-wrap0.html">flexbox-wrap0.html</a> example, and try viewing it live (take a local copy of this file now if you want to follow along with this example):
+                    </p>
+                    <figure>
+                        <img src="https://media.prod.mdn.mozit.cloud/attachments/2016/06/21/13410/32ebb3a8615fc65e21b55178f0dae139/flexbox-example3.png" alt="Flexbox example showing flexbox children overflowing the container">
+                        <figcaption>
+                            Flexbox example showing flexbox children overflowing the container
+                        </figcaption>
+                    </figure>
+                    <p>
+                        Here we see that the children are indeed breaking out of their container. One way in which you can fix this is to add the following declaration to your <code>&ltsection&gt</code>
+                    </p>
+                    <pre><code>flex-wrap: wrap;</code></pre>
+                    <p>
+                        Also, add the following declaration to your <code>&ltarticle&gt</code> rule:
+                    </p>
+                    <pre><code>flex: 200px;</code></pre>
+                    <p>Try this now; you'll see that the layout looks much better with this included:</p>
+                    <figure>
+                        <img src="https://media.prod.mdn.mozit.cloud/attachments/2016/06/21/13412/314e52407cb6bd74f795da2aa0a061f6/flexbox-example4.png" alt="Flexbox eample showing improved spacing">
+                        <figcaption>Flexbox eample showing improved spacing</figcaption>
+                    </figure>
+                    <p>
+                        We now have multiple rows — as many flexbox children are fitted onto each row as makes sense, and any overflow is moved down to the next line. The <code>flex: 200px</code> declaration set on the articles means that each will be at least 200px wide. We'll discuss this property in more detail later on. You might also notice that the last few children on the last row are each made wider so that the entire row is still filled.
+                    </p>
+                    <p>
+                        But there's more we can do here. First of all, try changing your <code>flex-direction</code> property value to <code>row-reverse</code> — now you'll see that you still have your multiple row layout, but it starts from the opposite corner of the browser window and flows in reverse.
+                    </p>
+                </article>
+            </section>
+
+            
+            <!-- 7. flex-flow shorthand -->
+            <!-- 8. Flexible sizing of flex items -->
+            <!-- 9. flex: shorthand versus longhand -->
+            <!-- 10. Horizontal and vertical alignment -->
+            <!-- 11. Ordering flex items -->
+            <!-- 12. Nested flex boxes -->
+            <!-- 13. Cross-broweser compatibility -->
+
 
             
         </main>
     </div>
 </body>
 </html>
+
+<!-- Demo article
+            <section class="main-section" id="#Introducing_a_simple_example">
+                <header class="headerText">Introducing a simple example</header>
+                <article>
+                    <p>
+                        In this article we are going to get you to work through a series of exercises to help you understand how flexbox works. To get started, you should make a local copy of the first starter file — <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flexbox0.html">flexbox0.html</a> from our github repo — load it in a modern browser (like Firefox or Chrome), and have a look at the code in your code editor. You can also see it live here.
+                    </p>
+                    <figure>
+                        <img alt="Image showing the starting point of Flexbox tutorial" src="https://i.imgur.com/Bih741v.png">
+                        <figcaption>Image showing the starting point of Flexbox tutorial</figcaption> 
+                    </figure>
+                    <p>You'll see that we have a <code>&ltheader&gt</code> element with a top level heading inside it, and a <code>&ltsection&gt</code> element containing three <code>&ltarticle&gt</code>s. We are going to use these to create a fairly standard three column layout.</p>
+                </article>
+            </section>
+
+-->

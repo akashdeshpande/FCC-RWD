@@ -35,6 +35,14 @@ article {
     text-align: justify;
 }
 
+code {
+    white-space: pre-line;
+}
+
+img {
+    max-width: 100%;
+}
+
 /* rules */
 
 .gridContainer{
