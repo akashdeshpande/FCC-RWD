@@ -79,7 +79,7 @@
             </section>
 
             <!-- 2. Introducing a simple example -->
-            <section class="main-section" id="#Introducing_a_simple_example">
+            <section class="main-section" id="Introducing_a_simple_example">
                 <header class="headerText">Introducing a simple example</header>
                 <article>
                     <p>
@@ -94,18 +94,17 @@
             </section>
 
             <!-- 3. Specifying what elements to lay out as flexible items -->
-            <section class="main-section" id="#Specifying_what_elements_to_lay_out_as_flexible_boxes">
+            <section class="main-section" id="Specifying_what_elements_to_lay_out_as_flexible_boxes">
                 <header class="headerText">Specifying what elements to lay out as flexible boxes</header>
                 <article>
                     <p>
                         To start with, we need to select which elements are to be laid out as flexible boxes. To do this, we set a special value of display on the parent element of the elements you want to affect. In this case we want to lay out the <code>&ltarticle&gt</code> elements, so we set this on the <code>&ltsection&gt</code>:
                     </p>
                     <pre>
-                        <code>
+                        <code class="codeBlock">
 section {
     display: flex;
-}
-                        </code>
+}                       </code>
                     </pre>
                     <p>
                         This causes the <code>&ltsection&gt</code> element to become a flex container, and its children to become flex items. The result of this should be something like so:
@@ -124,7 +123,7 @@ section {
             </section>
             
             <!-- 4. The flex model -->
-            <section class="main-section" id="#The_flex_model">
+            <section class="main-section" id="The_flex_model">
                 <header class="headerText">The flex model</header>
                 <article>
                     <p>
@@ -153,7 +152,7 @@ section {
             </section>
 
             <!-- 5. Columns or rows -->
-            <section class="main-section" id="#Columns_or_rows?">
+            <section class="main-section" id="Columns_or_rows?">
                 <header class="headerText">Columns or rows?</header>
                 <article>
                     <p>
@@ -170,7 +169,7 @@ section {
             </section>
 
             <!-- 6. Wrapping -->
-            <section class="main-section" id="#Wrapping">
+            <section class="main-section" id="Wrapping">
                 <header class="headerText">Wrapping</header>
                 <article>
                     <p>
@@ -206,27 +205,25 @@ section {
 
             
             <!-- 7. flex-flow shorthand -->
-            <section class="main-section" id="#flex-flow_shorthand">
+            <section class="main-section" id="flex-flow_shorthand">
                 <header class="headerText">flex-flow shorthand</header>
                 <article>
                     <p>At this point it is worth noting that a shorthand exists for <code>flex-direction</code> and <code>flex-wrap</code> — <code>flex-flow</code>. So for example, you can replace</p>
                     <pre>
-                        <code>
+                        <code class="codeBlock">
 flex-direction: row;
-flex-wrap: wrap;
-                        </code>
+flex-wrap: wrap;        </code>
                     </pre>
                     <p>with</p>
                     <pre>
-                        <code>
-flex-flow: row wrap;
-                        </code>
+                        <code class="codeBlock">
+flex-flow: row wrap;    </code>
                     </pre>
                 </article>
             </section>
 
             <!-- 8. Flexible sizing of flex items -->
-            <section class="main-section" id="#Flexible_sizing_of_flex_items">
+            <section class="main-section" id="Flexible_sizing_of_flex_items">
                 <header class="headerText">Flexible sizing of flex items</header>
                 <article>
                     <p>
@@ -236,11 +233,10 @@ flex-flow: row wrap;
                         First, add the following rule to the bottom of your CSS:
                     </p>
                     <pre>
-                        <code>
+                        <code class="codeBlock">
 article {
     flex: 1;
-}
-                        </code>
+}                       </code>
                     </pre>
                     <p>
                         This is a unitless proportion value that dictates how much of the available space along the main axis each flex item will take up compared to other flex items. In this case, we are giving each <code>&ltarticle&gt</code> element the same value (a value of 1), which means they will all take up an equal amount of the spare space left after things like padding and margin have been set. It is relative to other flex items, meaning that giving each flex item a value of 400000 would have exactly the same effect.
@@ -249,11 +245,10 @@ article {
                         Now add the following rule below the previous one:
                     </p>
                     <pre>
-                        <code>
+                        <code class="codeBlock">
 article:nth-of-type(3) {
     flex: 2;
-}
-                        </code>
+}                       </code>
                     </pre>
                     <p>
                         Now when you refresh, you'll see that the third <code>&ltarticle&gt</code> takes up twice as much of the available width as the other two. There are now four proportion units available in total (since 1 + 1 + 2 = 4). The first two flex items have one unit each, so they take 1/4 of the available space each. The third one has two units, so it takes up 2/4 of the available space (or one-half).
@@ -262,15 +257,14 @@ article:nth-of-type(3) {
                         You can also specify a minimum size value inside the flex value. Try updating your existing article rules like so:
                     </p>
                     <pre>
-                        <code>
+                        <code class="codeBlock">
 article {
     flex: 1 200px;
 }
     
 article:nth-of-type(3) {
     flex: 2 200px;
-}
-                        </code>
+}                       </code>
                     </pre>
                     <p>
                         This basically states "Each flex item will first be given 200px of the available space. After that, the rest of the available space will be shared out according to the proportion units." Try refreshing and you'll see a difference in how the space is shared.
@@ -286,7 +280,7 @@ article:nth-of-type(3) {
             </section>
 
             <!-- 9. flex: shorthand versus longhand -->
-            <section class="main-section" id="#flex:_shorthand_versus_longhand">
+            <section class="main-section" id="flex:_shorthand_versus_longhand">
                 <header class="headerText">flex: shorthand versus longhand</header>
                 <article>
                     <p>
@@ -310,7 +304,7 @@ article:nth-of-type(3) {
             </section>
 
             <!-- 10. Horizontal and vertical alignment -->
-            <section class="main-section" id="#Horizontal_and_vertical_alignment">
+            <section class="main-section" id="Horizontal_and_vertical_alignment">
                 <header class="headerText">Horizontal and vertical alignment</header>
                 <article>
                     <p>
@@ -327,13 +321,12 @@ article:nth-of-type(3) {
                         Now, add the following to the bottom of the example's CSS:
                     </p>
                     <pre>
-                        <code>
+                        <code class="codeBlock">
 div {
     display: flex;
     align-items: center;
     justify-content: space-around;
-}
-                        </code>
+}                       </code>
                     </pre>
                     <figure>
                         <img alt="Centered buttons on the horizonal menu bar" src="https://media.prod.mdn.mozit.cloud/attachments/2020/04/29/17210/96d86573b60cc21a1c56739d759c997b/flexbox_center_space-around.png">
@@ -360,11 +353,10 @@ div {
                         You can override the <code>align-items</code> behavior for individual flex items by applying the <code>align-self</code> property to them. For example, try adding the following to your CSS:
                     </p>
                     <pre>
-                        <code>
+                        <code class="codeBlock">
 button:first-child {
     align-self: flex-end;
-}
-                        </code>
+}                       </code>
                     </pre>
                     <p>
                         Have a look at what effect this has, and remove it again when you've finished.
@@ -396,7 +388,7 @@ button:first-child {
             </section>
 
             <!-- 11. Ordering flex items -->
-            <section class="main-section" id="#Ordering_flex_items">
+            <section class="main-section" id="Ordering_flex_items">
                 <header class="headerText">Ordering flex items</header>
                 <article>
                     <p>
@@ -406,11 +398,10 @@ button:first-child {
                         The code for this is simple; try adding the following CSS to your button bar example code:
                     </p>
                     <pre>
-                        <code>
+                        <code class="codeBlock">
 button:first-child {
     order: 1;
-}
-                        </code>
+}                       </code>
                     </pre>
                     <p>
                         Refresh, and you'll now see that the "Smile" button has moved to the end of the main axis. Let's talk about how this works in a bit more detail:
@@ -433,17 +424,16 @@ button:first-child {
                         You can set negative order values to make items appear earlier than items with 0 set. For example, you could make the "Blush" button appear at the start of the main axis using the following rule:
                     </p>
                     <pre>
-                        <code>
+                        <code class="codeBlock">
 button:last-child {
     order: -1;
-}
-                        </code>
+}                       </code>
                     </pre>
                 </article>
             </section>
 
             <!-- 12. Nested flex boxes -->
-            <section class="main-section" id="#Nested_flex_boxes">
+            <section class="main-section" id="Nested_flex_boxes">
                 <header class="headerText">Nested flex boxes</header>
                 <article>
                     <p>
@@ -457,15 +447,14 @@ button:last-child {
                         The HTML for this is fairly simple. We've got a <code>&ltsection&gt</code> element containing three <code>&ltarticle&gt</code>s. The third <code>&ltarticle&gt</code> contains three <code>&ltdiv&gt</code>s. :
                     </p>
                     <pre>
-                        <code>
+                        <code class="codeBlock">
 section - article
 article
 article - div - button
           div   button
           div   button
                 button
-                button
-                        </code>
+                button  </code>
                     </pre>
                     <p>
                         Let's look at the code we've used for the layout.
@@ -474,17 +463,16 @@ article - div - button
                         First of all, we set the children of the <code>&ltsection&gt</code> to be laid out as flexible boxes.
                     </p>
                     <pre>
-                        <code>
+                        <code class="codeBlock">
 section {
     display: flex;
-}
-                        </code>
+}                       </code>
                     </pre>
                     <p>
                         Next, we set some flex values on the <code>&ltarticle&gt</code>s themselves. Take special note of the 2nd rule here — we are setting the third <code>&ltarticle&gt</code> to have its children laid out like flex items too, but this time we are laying them out like a column.
                     </p>
                     <pre>
-                        <code>
+                        <code class="codeBlock">
 article {
     flex: 1 200px;
 }
@@ -493,42 +481,39 @@ article:nth-of-type(3) {
 flex: 3 200px;
 display: flex;
 flex-flow: column;
-}
-                        </code>
+}                       </code>
                     </pre>
                     <p>
                         Next, we select the first <code>&ltdiv&gt</code>. We first use <code>flex:1 100px;</code> to effectively give it a minimum height of 100px, then we set its children (the <code>&ltbutton&gt</code> elements) to also be laid out like flex items. Here we lay them out in a wrapping row, and align them in the center of the available space, as we did in the individual button example we saw earlier.
                     </p>
                     <pre>
-                        <code>
+                        <code class="codeBlock">
 article:nth-of-type(3) div:first-child {
     flex:1 100px;
     display: flex;
     flex-flow: row wrap;
     align-items: center;
     justify-content: space-around;
-}
-                        </code>
+}                       </code>
                     </pre>
                     <p>
                         Finally, we set some sizing on the button, but more interestingly we give it a flex value of 1 auto. This has a very interesting effect, which you'll see if you try resizing your browser window width. The buttons will take up as much space as they can, and sit as many on the same line as they can, but when they can no longer fit comfortably on the same line, they'll drop down to create new lines.
                     </p>
                     <pre>
-                        <code>
+                        <code class="codeBlock">
 button {
     flex: 1 auto;
     margin: 5px;
     font-size: 18px;
     line-height: 1.5;
-}
-                        </code>
+}                       </code>
                     </pre>
 
                 </article>
             </section>
 
             <!-- 13. Cross-broweser compatibility -->
-            <section class="main-section" id="#Cross-broweser_compatibility">
+            <section class="main-section" id="Cross-browser_compatibility">
                 <header class="headerText">Cross-broweser compatibility</header>
                 <article>
                     <p>
@@ -547,16 +532,12 @@ button {
             </section>
 
             <!-- Reference -->
-            <section class="main-section" id="#Reference">
+            <section class="main-section" id="Reference">
                 <header class="headerText">Reference</header>
                 <article>
                     <p>
                         All documentation from this page was taken from <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox">MDN</a>.
                     </p>
-                    <figure>
-                        <img alt="example" src="example">
-                        <figcaption>example</figcaption> 
-                    </figure>
                 </article>
             </section>
             
@@ -564,19 +545,3 @@ button {
     </div>
 </body>
 </html>
-
-<!-- Demo article
-            <section class="main-section" id="#example">
-                <header class="headerText">Example</header>
-                <article>
-                    <p>
-                        example
-                    </p>
-                    <figure>
-                        <img alt="example" src="example">
-                        <figcaption>example</figcaption> 
-                    </figure>
-                </article>
-            </section>
-
--->
