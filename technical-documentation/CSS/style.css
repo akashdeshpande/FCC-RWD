@@ -22,9 +22,6 @@ h1, h2, h3 {
     padding: 0;
 }
 
-h1 {
-    font-size: 52px;
-}
 
 .headerText {
     font-family: "Zilla Slab", serif;
@@ -48,7 +45,7 @@ img {
 
 code {
     font-size: 14px;
-    color: var(--bright);
+    color: var(--accent);
     background-color: var(--dark);
 }
 
@@ -60,9 +57,12 @@ pre {
     border-radius: 8px;
 }
 
+figure {
+    margin: 1em 0px;
+}
 /* rules */
 
-.gridContainer{
+.gridContainer {
     display: grid;
     grid-template-columns: 20em 1fr;
     height: 100vh;
@@ -82,7 +82,7 @@ pre {
     display: grid;
     justify-items: center;
     align-items: center;
-    font-size: 1.6em;
+    font-size: 52px;
     grid-template-rows: 1fr 2px;
 }
 
@@ -129,4 +129,78 @@ pre {
 .codeBlock {
     background-color: initial;
     color: var(--accent);
+}
+
+@media (min-width: 996px) {
+    .title {
+        font-size: 38px;
+    }
+}
+
+@media (max-width: 996px) {
+    .gridContainer {
+        grid-template-columns: 16em 1fr;
+    }
+
+    pre {
+        margin: 0px;
+    }
+
+    .title {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 768px) {
+    .gridContainer {
+        grid-template-columns: unset;
+        grid-template-rows: 14em 1fr;
+    }
+
+    .title {
+        font-size: 28px;
+    }
+
+    #navbar {
+        grid-template-rows: 64px 1fr;
+    }
+
+    #main-doc {
+        padding: 12px 16px;
+    }
+
+    .index ul {
+        grid-template-rows: repeat(14, 38px);
+    }
+
+    .headerText {
+        font-size: 30px;
+    }
+
+    pre {
+        padding: 8px 16px;
+        overflow-x: auto;
+    }
+}
+
+@media (max-width: 400px) {
+    #main-doc {
+        padding: 12px 0px;
+    }
+    
+    .headerText {
+        margin: 8px 8px;
+    }
+
+    article {
+        margin: 0 8px;
+    }
+
+    article ul {
+        padding-left: 16px;
+    }
+
+    pre {
+        width: 78vw;
+    }
 }
