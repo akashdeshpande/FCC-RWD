@@ -31,7 +31,24 @@ h1, h2, h3 {
 }
 
 table, th, td {
-    border: 1px solid var(--dark);
+    border: 2px solid var(--dark);
+}
+
+table {
+    border-collapse: collapse;
+    box-sizing: border-box;
+}
+
+th, td {
+    padding: 8px;
+}
+
+th {
+    background-color: var(--accent);
+}
+
+td {
+    background-color: white;
 }
 
 article {
