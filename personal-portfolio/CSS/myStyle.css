@@ -1,13 +1,21 @@
 /* imports */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
 /* global rules */
 :root {
     --headerColor: #fcfcfc;
-    --headerHeight: 100px;
+    --headerHeight: 80px;
+    --accent: #FF9100;
+    --darkGrey: #333;
+    --mediumGrey: #666;
+    --lightGrey: #aaa;
+    --padding: 0 72px
 }
 
 body {
     margin: 0;
+    font-size: 16px;
+    font-family: "Poppins", Montserrat, Arial, sans-serif;
 }
 
 header {
@@ -18,11 +26,85 @@ header {
     position: absolute;
     top: 0;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--padding);
 }
 
 
 /* rules */
 .bodyContainer {
-    margin-top: var(--headerHeight);
+    padding: var(--padding);
+}
+
+.logo {
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+.logoPic {
+    font-size: 40px;
+    display: flex;
+
+}
+
+.orangeText {
+    color: var(--accent);
+}
+
+.logoName {
+    font-size: 20px;
+    margin-left: 16px;
+}
+
+.navLink {
+    text-decoration: none;
+    color: var(--lightGrey);
+    margin-left: 32px;
+    font-size: 14px;
+}
+
+.selectedNavLink {
+    color: var(--darkGrey);
+    font-weight: 500;
+}
+
+.aboutContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.titleText {
+    font-weight: 600;
+    font-size: 40px;
+    margin: 0;
+}
+
+.subHeading {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--lightGrey);
+    margin: 8px 0;
+}
+
+.aboutMe {
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--mediumGrey);
+    margin-top: 12px;
+}
+
+.buttonCTA{
+    width: max-content;
+    padding: 6px 24px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    border: 2px solid var(--accent);
+    background-color: white;
+    font-family: "Poppins", Montserrat, sans-serif;
+    font-size: 16px;
 }
