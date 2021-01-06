@@ -1,0 +1,28 @@
+/* imports */
+
+/* global rules */
+:root {
+    --headerColor: #fcfcfc;
+    --headerHeight: 100px;
+}
+
+body {
+    margin: 0;
+}
+
+header {
+    box-sizing: border-box;
+    width: 100%;
+    height: var(--headerHeight);
+    background-color: var(--headerColor);
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+/* rules */
+.bodyContainer {
+    margin-top: var(--headerHeight);
+}
