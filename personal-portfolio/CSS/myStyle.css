@@ -9,7 +9,8 @@
     --darkGrey: #333;
     --mediumGrey: #666;
     --lightGrey: #aaa;
-    --padding: 0 72px
+    --paddingValue: 72px;
+    --padding: 0 72px;
 }
 
 body {
@@ -23,7 +24,7 @@ header {
     width: 100%;
     height: var(--headerHeight);
     background-color: var(--headerColor);
-    position: absolute;
+    position: fixed;
     top: 0;
     display: flex;
     justify-content: space-between;
@@ -58,9 +59,13 @@ header {
     margin-left: 16px;
 }
 
+.navLinks {
+    display: flex;
+}
+
 .navLink {
     text-decoration: none;
-    color: var(--lightGrey);
+    color: var(--mediumGrey);
     margin-left: 32px;
     font-size: 14px;
 }
@@ -68,11 +73,34 @@ header {
 .selectedNavLink {
     color: var(--darkGrey);
     font-weight: 500;
+    display: block;
+    position: relative;
+    transition: color 0.3s ease-in-out;
 }
 
-.aboutContainer {
+.selectedNavLink:hover {
+    color: var(--accent);
+}
+
+.selectedNavLink::after {
+    content: '';
+    position: absolute;
+    display: block;
+    background-color: var(--accent);
+    width: 100%;
+    height: 2px;
+}
+
+.navLinkContainer {
+    display: flex;
+}
+
+.containerBlock {
     display: flex;
     flex-direction: column;
+}
+
+.heroSection {
     align-items: center;
     justify-content: center;
     height: 100vh;
@@ -82,6 +110,7 @@ header {
     font-weight: 600;
     font-size: 40px;
     margin: 0;
+    margin-top: 30px;
 }
 
 .subHeading {
@@ -107,4 +136,48 @@ header {
     background-color: white;
     font-family: "Poppins", Montserrat, sans-serif;
     font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0px 10px 10px -8px rgba(255, 145, 0, 0.22);
+    user-select: none;
+}
+
+.buttonCTA:focus {
+    outline: none;
+}
+
+.buttonCTA:hover {
+    background-color: var(--accent);
+    color: white;
+    box-shadow: none;
+}
+
+.workSection {
+    padding: 24px 0px;
+    background-color: var(--headerColor);
+}
+
+.containerBlockHeading {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.containerBlockHeading::before{
+    content: '';
+    position: absolute;
+    width: 16%;
+    bottom: -62px;
+    height: 2px;
+    background-color: var(--lightGrey);
+}
+
+.containerBlockHeading::after{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 5%;
+    bottom: -62px;
+    left: var(--paddingValue);
+    height: 2px;
+    background-color: var(--accent);
 }
