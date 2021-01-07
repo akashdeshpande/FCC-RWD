@@ -9,8 +9,9 @@
     --darkGrey: #333;
     --mediumGrey: #666;
     --lightGrey: #aaa;
-    --paddingValue: 72px;
-    --padding: 0 72px;
+    --lighterGrey: #ccc;
+    --paddingDesktop: 0 72px;
+    --paddingMobile: 0 36px;
 }
 
 body {
@@ -29,13 +30,14 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: var(--padding);
+    padding: var(--paddingDesktop);
+    z-index: 2;
 }
 
 
 /* rules */
-.bodyContainer {
-    padding: var(--padding);
+.sectionContainer {
+    padding: var(--paddingDesktop);
 }
 
 .logo {
@@ -160,24 +162,184 @@ header {
 .containerBlockHeading {
     font-size: 22px;
     font-weight: 600;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    width: max-content;
 }
 
 .containerBlockHeading::before{
     content: '';
+    display: block;
     position: absolute;
-    width: 16%;
-    bottom: -62px;
-    height: 2px;
-    background-color: var(--lightGrey);
+    width: 100%;
+    bottom: -4px;
+    height: 3px;
+    background-color: var(--lighterGrey);
 }
 
 .containerBlockHeading::after{
     content: '';
     display: block;
     position: absolute;
-    width: 5%;
-    bottom: -62px;
-    left: var(--paddingValue);
-    height: 2px;
+    width: 40%;
+    bottom: -4px;
+    height: 3px;
     background-color: var(--accent);
+}
+
+/* the projects grid */
+
+.projects {
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 32px;
+    margin-top: 32px;
+    margin-bottom: 48px;
+}
+
+.project {
+    height: 256px;
+    background-color: var(--lighterGrey);
+    border-radius: 18px;
+    position: relative;
+    cursor: pointer;
+}
+
+.projectImage{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    text-align: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    border-radius: 16px;
+}
+
+.blackGradientOverlay{
+    position: absolute;
+    text-align: center;
+    height: 40%;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    font-size: 18px;
+    background: linear-gradient(0deg, rgba(0,0,0,1), rgba(0,0,0,0));
+    border-radius: 0px 0px 16px 16px;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.projectTitle{
+    position: absolute;
+    text-align: center;
+    box-sizing: border-box;
+    height: max-content;
+    width: 100%;
+    bottom:0;
+    left: 0;
+    font-size: 18px;
+    color: white;;
+    padding: 24px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    opacity: 1;
+    user-select: none;
+    transition: opacity 0.3s ease;
+}
+
+.project:hover .blackGradientOverlay{
+    opacity: 0;
+}
+
+.project:hover .projectTitle{
+    opacity: 0;
+}
+
+@media(min-width: 1200px) {
+    .project{
+        grid-column: span 4;
+        height: 16vw;
+    }
+}
+
+
+@media(max-width: 1200px) {
+    .project{
+        grid-column: span 6;
+        height: 24vw;
+    }
+}
+
+@media(max-width: 992px) {
+    .project{
+        grid-column: span 6;
+    }
+}
+
+@media(max-width: 768px) {
+    .project{
+        grid-column: span 12;
+        height: 44vw;
+    }
+}
+
+@media(max-width:  576px) {
+    header {
+        padding: var(--paddingMobile);
+    }
+    .sectionContainer {
+        padding: var(--paddingMobile);
+    }
+    .project{
+        grid-column: span 12;
+    }
+    .projects{
+        grid-column-gap: 0;
+        grid-row-gap: 32px;
+    }
+    .projectTitle{
+        font-size: 14px;
+    }
+    .blackGradientOverlay{
+        height: 50%;
+    }
+}
+
+@media(max-width:  320px) {
+    .project{
+        grid-column: span 12;
+        height: 34vw;
+    }
+}
+
+
+/* project images */
+.project1 {
+    background: #808080 url("https://raw.githubusercontent.com/akashdeshpande/FCC-RWD/main/tribute-page/images/album-covers/what-ive-done.jpg") no-repeat top/cover;
+}
+
+.project2{
+    background: #143083 url("https://raw.githubusercontent.com/akashdeshpande/FCC-RWD/main/tribute-page/images/chester-hero.jpg") no-repeat top/cover;
+}
+
+.project3 {
+    background: #808080 url("https://raw.githubusercontent.com/akashdeshpande/FCC-RWD/main/survey-page/assets/background-image.jpg") no-repeat top/cover;
+}
+
+.project4{
+    background: #143083 url("https://raw.githubusercontent.com/akashdeshpande/FCC-RWD/main/tribute-page/images/album-covers/castle-of-glass.jpg") no-repeat top/cover;
+}
+
+.project5 {
+    background: #808080 url("https://raw.githubusercontent.com/akashdeshpande/FCC-RWD/main/tribute-page/images/album-covers/numb.jpg") no-repeat top/cover;
+}
+
+.project6{
+    background: #143083 url("https://raw.githubusercontent.com/akashdeshpande/FCC-RWD/main/tribute-page/images/album-covers/in-the-end.jpg") no-repeat top/cover;
 }
