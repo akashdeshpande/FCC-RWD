@@ -3,7 +3,7 @@
 
 /* global rules */
 :root {
-    --headerColor: #fcfcfc;
+    --headerColor: #fafafa;
     --headerHeight: 80px;
     --accent: #FF9100;
     --darkGrey: #333;
@@ -36,7 +36,7 @@ header {
 
 
 /* rules */
-.sectionContainer {
+.containerPadding {
     padding: var(--paddingDesktop);
 }
 
@@ -112,6 +112,9 @@ header {
     font-weight: 600;
     font-size: 40px;
     margin: 0;
+}
+
+.name {
     margin-top: 30px;
 }
 
@@ -122,10 +125,13 @@ header {
     margin: 8px 0;
 }
 
-.aboutMe {
+.paragraph {
     font-size: 16px;
     font-weight: 400;
     color: var(--mediumGrey);
+}
+
+.aboutMe {
     margin-top: 12px;
 }
 
@@ -260,6 +266,53 @@ header {
 .project:hover .projectTitle{
     opacity: 0;
 }
+
+.greyContainer {
+    background-color: var(--headerColor);
+    height: 528px;
+}
+
+.contactContainer {
+    height: 85%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.noTopMargin {
+    margin-top: 0px;
+}
+
+.contactIconContainer {
+    width: 260px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px;
+}
+
+.contactIconContainer ul {
+    list-style: none;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 0px;
+    font-size: 18px;
+}
+
+.contactIconContainer ul li {
+    display: inline;
+}
+
+.contactIconContainer ul li a {
+    color: var(--darkGrey);
+    transition: color 0.3s ease-in-out;
+}
+
+.contactIconContainer ul li a:hover {
+    color: var(--accent);
+}
+
+/* responsiveness */
 
 @media(min-width: 1200px) {
     .project{
