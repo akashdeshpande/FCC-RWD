@@ -205,7 +205,7 @@ header {
     margin-bottom: 48px;
 }
 
-.project {
+.project-tile {
     height: 256px;
     background-color: var(--lighterGrey);
     border-radius: 18px;
@@ -259,11 +259,11 @@ header {
     transition: opacity 0.3s ease;
 }
 
-.project:hover .blackGradientOverlay{
+.project-tile:hover .blackGradientOverlay{
     opacity: 0;
 }
 
-.project:hover .projectTitle{
+.project-tile:hover .projectTitle{
     opacity: 0;
 }
 
@@ -315,7 +315,7 @@ header {
 /* responsiveness */
 
 @media(min-width: 1200px) {
-    .project{
+    .project-tile{
         grid-column: span 4;
         height: 16vw;
     }
@@ -323,20 +323,20 @@ header {
 
 
 @media(max-width: 1200px) {
-    .project{
+    .project-tile{
         grid-column: span 6;
         height: 24vw;
     }
 }
 
 @media(max-width: 992px) {
-    .project{
+    .project-tile{
         grid-column: span 6;
     }
 }
 
 @media(max-width: 768px) {
-    .project{
+    .project-tile{
         grid-column: span 12;
         height: 44vw;
     }
@@ -349,7 +349,7 @@ header {
     .sectionContainer {
         padding: var(--paddingMobile);
     }
-    .project{
+    .project-tile{
         grid-column: span 12;
     }
     .projects{
@@ -365,7 +365,7 @@ header {
 }
 
 @media(max-width:  320px) {
-    .project{
+    .project-tile{
         grid-column: span 12;
         height: 34vw;
     }
