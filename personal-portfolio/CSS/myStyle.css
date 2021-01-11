@@ -14,6 +14,10 @@
     --paddingMobile: 0 36px;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     font-size: 16px;
@@ -34,6 +38,9 @@ header {
     z-index: 2;
 }
 
+footer {
+    text-align: center;
+}
 
 /* rules */
 .containerPadding {
@@ -112,6 +119,8 @@ header {
     font-weight: 600;
     font-size: 40px;
     margin: 0;
+    text-align: center;
+    line-height: 40px;
 }
 
 .name {
@@ -192,6 +201,12 @@ header {
     bottom: -4px;
     height: 3px;
     background-color: var(--accent);
+}
+
+p a {
+    color: var(--accent);
+    font-weight: 600;
+    text-decoration: none;
 }
 
 /* the projects grid */
@@ -340,6 +355,12 @@ header {
         grid-column: span 12;
         height: 44vw;
     }
+    .logoPic {
+        font-size: 34px;
+    }
+    .logoName {
+        font-size:  18px;
+    }
 }
 
 @media(max-width:  576px) {
@@ -361,6 +382,12 @@ header {
     }
     .blackGradientOverlay{
         height: 50%;
+    }
+    .subHeading {
+        margin-top: 16px;
+    }
+    .containerPadding {
+        padding: var(--paddingMobile);
     }
 }
 
