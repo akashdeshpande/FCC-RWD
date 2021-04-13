@@ -1,11 +1,11 @@
 /* imports */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 
 /* global rules */
 :root {
     --headerColor: #fafafa;
     --headerHeight: 80px;
-    --accent: #FF9100;
+    --accent: #ff9100;
     --darkGrey: #333;
     --mediumGrey: #666;
     --lightGrey: #aaa;
@@ -56,7 +56,6 @@ footer {
 .logoPic {
     font-size: 40px;
     display: flex;
-
 }
 
 .orangeText {
@@ -92,7 +91,7 @@ footer {
 }
 
 .selectedNavLink::after {
-    content: '';
+    content: "";
     position: absolute;
     display: block;
     background-color: var(--accent);
@@ -144,7 +143,11 @@ footer {
     margin-top: 12px;
 }
 
-.buttonCTA{
+.roundedAnchor {
+    border-radius: 20px;
+}
+
+.buttonCTA {
     width: max-content;
     padding: 6px 24px;
     box-sizing: border-box;
@@ -154,7 +157,8 @@ footer {
     font-family: "Poppins", Montserrat, sans-serif;
     font-size: 16px;
     cursor: pointer;
-    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out,
+        box-shadow 0.3s ease-in-out;
     box-shadow: 0px 10px 10px -8px rgba(255, 145, 0, 0.22);
     user-select: none;
 }
@@ -183,8 +187,8 @@ footer {
     width: max-content;
 }
 
-.containerBlockHeading::before{
-    content: '';
+.containerBlockHeading::before {
+    content: "";
     display: block;
     position: absolute;
     width: 100%;
@@ -193,8 +197,8 @@ footer {
     background-color: var(--lighterGrey);
 }
 
-.containerBlockHeading::after{
-    content: '';
+.containerBlockHeading::after {
+    content: "";
     display: block;
     position: absolute;
     width: 40%;
@@ -228,7 +232,7 @@ p a {
     cursor: pointer;
 }
 
-.projectImage{
+.projectImage {
     position: absolute;
     height: 100%;
     width: 100%;
@@ -241,7 +245,7 @@ p a {
     border-radius: 16px;
 }
 
-.blackGradientOverlay{
+.blackGradientOverlay {
     position: absolute;
     text-align: center;
     height: 40%;
@@ -249,22 +253,22 @@ p a {
     bottom: 0;
     left: 0;
     font-size: 18px;
-    background: linear-gradient(0deg, rgba(0,0,0,1), rgba(0,0,0,0));
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
     border-radius: 0px 0px 16px 16px;
     opacity: 1;
     transition: opacity 0.3s ease;
 }
 
-.projectTitle{
+.projectTitle {
     position: absolute;
     text-align: center;
     box-sizing: border-box;
     height: max-content;
     width: 100%;
-    bottom:0;
+    bottom: 0;
     left: 0;
     font-size: 18px;
-    color: white;;
+    color: white;
     padding: 24px;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -274,11 +278,11 @@ p a {
     transition: opacity 0.3s ease;
 }
 
-.project-tile:hover .blackGradientOverlay{
+.project-tile:hover .blackGradientOverlay {
     opacity: 0;
 }
 
-.project-tile:hover .projectTitle{
+.project-tile:hover .projectTitle {
     opacity: 0;
 }
 
@@ -329,29 +333,28 @@ p a {
 
 /* responsiveness */
 
-@media(min-width: 1200px) {
-    .project-tile{
+@media (min-width: 1200px) {
+    .project-tile {
         grid-column: span 4;
         height: 16vw;
     }
 }
 
-
-@media(max-width: 1200px) {
-    .project-tile{
+@media (max-width: 1200px) {
+    .project-tile {
         grid-column: span 6;
         height: 24vw;
     }
 }
 
-@media(max-width: 992px) {
-    .project-tile{
+@media (max-width: 992px) {
+    .project-tile {
         grid-column: span 6;
     }
 }
 
-@media(max-width: 768px) {
-    .project-tile{
+@media (max-width: 768px) {
+    .project-tile {
         grid-column: span 12;
         height: 44vw;
     }
@@ -359,28 +362,28 @@ p a {
         font-size: 34px;
     }
     .logoName {
-        font-size:  18px;
+        font-size: 18px;
     }
 }
 
-@media(max-width:  576px) {
+@media (max-width: 576px) {
     header {
         padding: var(--paddingMobile);
     }
     .sectionContainer {
         padding: var(--paddingMobile);
     }
-    .project-tile{
+    .project-tile {
         grid-column: span 12;
     }
-    .projects{
+    .projects {
         grid-column-gap: 0;
         grid-row-gap: 32px;
     }
-    .projectTitle{
+    .projectTitle {
         font-size: 14px;
     }
-    .blackGradientOverlay{
+    .blackGradientOverlay {
         height: 50%;
     }
     .subHeading {
@@ -391,27 +394,34 @@ p a {
     }
 }
 
-@media(max-width:  320px) {
-    .project-tile{
+@media (max-width: 320px) {
+    .project-tile {
         grid-column: span 12;
         height: 34vw;
     }
 }
 
-
 /* project images */
 .project1 {
-    background: #143083 url("https://github.com/akashdeshpande/FCC-RWD/blob/main/personal-portfolio/assets/images/Chester%20bennington%20-%20A%20tribute%20page.jpg?raw=true") no-repeat top/cover;
+    background: #143083
+        url("https://github.com/akashdeshpande/FCC-RWD/blob/main/personal-portfolio/assets/images/Chester%20bennington%20-%20A%20tribute%20page.jpg?raw=true")
+        no-repeat top/cover;
 }
 
-.project2{
-    background: #323336 url("https://github.com/akashdeshpande/FCC-RWD/blob/main/personal-portfolio/assets/images/F%20R%20I%20E%20N%20D%20S%20Trivia%20Survey.jpg?raw=true") no-repeat top/cover;
+.project2 {
+    background: #323336
+        url("https://github.com/akashdeshpande/FCC-RWD/blob/main/personal-portfolio/assets/images/F%20R%20I%20E%20N%20D%20S%20Trivia%20Survey.jpg?raw=true")
+        no-repeat top/cover;
 }
 
 .project3 {
-    background: #fdfdfd url("https://github.com/akashdeshpande/FCC-RWD/blob/main/personal-portfolio/assets/images/Product%20Landing%20Page.jpg?raw=true") no-repeat top/cover;
+    background: #808080
+        url("https://github.com/akashdeshpande/FCC-RWD/blob/main/personal-portfolio/assets/images/Product%20Landing%20Page.jpg?raw=true")
+        no-repeat top/cover;
 }
 
-.project4{
-    background: #eeeeee url("https://github.com/akashdeshpande/FCC-RWD/blob/main/personal-portfolio/assets/images/Technical%20Documentation%20Page.png?raw=true") no-repeat top/cover;
+.project4 {
+    background: #eeeeee
+        url("https://github.com/akashdeshpande/FCC-RWD/blob/main/personal-portfolio/assets/images/Technical%20Documentation%20Page.png?raw=true")
+        no-repeat top/cover;
 }
